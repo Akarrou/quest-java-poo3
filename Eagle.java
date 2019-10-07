@@ -53,7 +53,7 @@ public class Eagle extends Bird implements Fly {
             System.out.printf("%s landed on the ground",this.getName());
         } else {
             
-            System.out.printf(" s%syou are in flight continue to decend )",this.getName());
+            System.out.printf(" %s you are in flight continue to decend )",this.getName());
         }
 
     }
