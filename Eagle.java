@@ -26,14 +26,14 @@ public class Eagle extends Bird implements Fly {
     public void takeOff() {
         if (!this.flying && this.altitude == 0);
         this.flying = true;
-        System.out.printf( "s% deploys its wings and take off !",this.getName());
+        System.out.printf( "%s deploys its wings and take off !",this.getName());
     }
 
     @Override
     public int ascend(int meters) {
         if (isFlying()) {
             this.altitude += meters;
-            System.out.printf("s% ascended to the height of s%" ,this.getName(), this.altitude);
+            System.out.printf("%s ascended to the height of %s" ,this.getName(), this.altitude);
         }
         return this.altitude;
     }
@@ -42,7 +42,7 @@ public class Eagle extends Bird implements Fly {
     public int descend(int meters) {
         if (isFlying()) {
             this.altitude += -meters;
-            System.out.printf("s% descended to the height of s%" ,this.getName(), this.altitude);
+            System.out.printf("%s descended to the height of %s" ,this.getName(), this.altitude);
         }
         return this.altitude;
     }
@@ -50,10 +50,10 @@ public class Eagle extends Bird implements Fly {
     @Override
     public void land() {
         if (isFlying() && this.altitude == 1) {
-            System.out.printf("s% landed on the ground",this.getName());
+            System.out.printf("%s landed on the ground",this.getName());
         } else {
             
-            System.out.printf(" s%you are in flight continue to decend s%)",this.getName());
+            System.out.printf(" s%syou are in flight continue to decend )",this.getName());
         }
 
     }
